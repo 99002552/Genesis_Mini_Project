@@ -1,0 +1,22 @@
+Test Plan,,,,,
+Integration Test Plan,,,,,
+,,,,,
+ID,DESCRIPTION,PRE-CONDITION,EXPECTED INPUT,EXPECTED OUTPUT,ACTUAL OUTPUT
+HL_02_T4,Turning the entire system ON by prerssing the push button ,Entire System is in OFF state,Push Button press,Green Led is turned ON and BBB transmits the data via SPI,Green Led is ON and SPI transmission is initiated
+HL_01_T1,SPI Communication ,Entire System is in OFF state,Push Button press,BBB has to transmit the data,BBB transmitted the data
+,,,,,
+HL_01_T2,SPI Communication,Push Button press,BBB transmitting the data,STM32 receiving the data indicated by turning the Led ON ,STM32 received the data and indicated by turning the Led ON
+,,,,,
+HL_03_T3,Ultrasonic sensor Activation,Push Button press,STM32 has to receive the data via SPI,Ultrasonic sensor activation and detects the obstacle,Ultrasonic sensor is activated and detects the obstacle.
+,,,,,
+Unit test plan,,,,,
+ID,DESCRIPTION,PRE-CONDITION,EXPECTED INPUT,EXPECTED OUTPUT,ACTUAL OUTPUT
+HL_01_L1_U1,Enabling SPI peripheral in boot time,-,Adding device tree for SPI peripheral in uEnv.txt file,SPI is enabled,SPI is enabled
+,,,,,(cat /sys/kernel/debug/pinctrl/pinctrll-single/pingroups)
+HL_02_L2_U2,Green Led Module activation,Entire system is in OFF state,Pressing  of push button,Green Led ON,Green Led ON
+HL_03_L3_U3,Ultrasonic sensor reading,Received the non zero value from BBB via SPI,Obstacle detected,Displaying distance and turning ON led,Displayed distance and led is turned ON
+HL_03_L3_U3,Ultrasonic Distance range,Received the non zero value from BBB via SPI,Obstacle is in the range of <2,Blue Led ON,Blue Led ON
+HL_03_L3_U3,Ultrasonic Distance range,Received the non zero value from BBB via SPI,Obstacle is in the range of >2 and <4,Red Led ON,Red Led ON
+HL_03_L3_U3,Ultrasonic Distance range,Received the non zero value from BBB via SPI,Obstacle is in the range of >4 and <7,Orange Led ON,Orange Led ON
+HL_03_L3_U3,Ultrasonic Distance range,Received the non zero value from BBB via SPI,Obstacle is in the range of >7 and <15,All Leds ON,All Leds ON
+HL_03_L3_U3,Ultrasonic Distance range,Received the non zero value from BBB via SPI,Obstacle is in the range of >17,All Leds OFF,All Leds OFF
