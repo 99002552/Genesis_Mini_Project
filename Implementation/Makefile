@@ -1,4 +1,4 @@
-SRC = pushAndLed.c\
+SRC = pushandled.c\
 mainpgrm.c
 
 PROJECT_NAME = man.out
