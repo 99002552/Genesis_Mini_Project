@@ -8,6 +8,6 @@ Objective:
 
 # Badges
 
-|BUILD|CODACY|
-|:--:|:--:|
-|![C/C++ CI](https://github.com/99002552/2009MYSEMB01-02/workflows/C/C++%20CI/badge.svg)|[![Codacy Badge](https://app.codacy.com/project/badge/Grade/76ff983bebcd43d2b9cd5c3ace16a326)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=99002552/2009MYSEMB01-02&amp;utm_campaign=Badge_Grade)|
+|BUILD|CODACY|CppCheck|
+|:--:|:--:|:--:|
+|![C/C++ CI](https://github.com/99002552/2009MYSEMB01-02/workflows/C/C++%20CI/badge.svg)|[![Codacy Badge](https://app.codacy.com/project/badge/Grade/76ff983bebcd43d2b9cd5c3ace16a326)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=99002552/2009MYSEMB01-02&amp;utm_campaign=Badge_Grade)|![cppcheck-action](https://github.com/99002552/2009MYSEMB01-02/workflows/cppcheck-action/badge.svg)|
